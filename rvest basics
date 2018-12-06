@@ -1,0 +1,19 @@
+# read html into object
+algeria <- read_html("https://www.state.gov/j/drl/rls/hrrpt/2017/nea/277235.htm")
+
+# use inspectorgadget to locate path fot html_nodes
+rr17 <- algeria %>% 
+	html_nodes(".section6women p:nth-child(6)") %>%
+	html_text()
+rr17
+
+benin <- read_html("https://www.state.gov/j/drl/rls/hrrpt/2017/af/276969.htm")
+
+bbb <- benin %>%
+	html_nodes(".section1darbitrary .sub-section_content > p") %>%
+	html_text()
+bbb
+
+rrbenin17 <- benin %>%
+	html_nodes(".section6women p:nth-child(7)") %>%
+	html_text()
